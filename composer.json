@@ -1,0 +1,19 @@
+{
+    "name": "harmstyler/inflector",
+    "type": "library",
+    "description": "Way to handle the pluralization/singularization of words in php.",
+    "keywords": ["string", "inflection", "singularize", "pluralize"],
+    "homepage": "https://github.com/harmstyler/Inflect",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "autoload": {
+        "psr-0": { "HarmsTyler\\Common\\Inflector\\": "lib/" }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
