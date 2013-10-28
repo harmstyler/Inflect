@@ -1,4 +1,3 @@
-Inflect
-=======
+# Inflect
 
-Way to handle the pluralization of words in php
+Way to handle the pluralization/singularization of words in php.
