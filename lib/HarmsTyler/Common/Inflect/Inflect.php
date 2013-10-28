@@ -1,9 +1,16 @@
 <?php
-/*
+
+namespace HarmsTyler\Common\Inflect;
+
+/**
  * Class Inflect
+ * @package HarmsTyler\Common\Inflect
  */
 class Inflect
 {
+    /**
+     * @var array
+     */
     static $plural = array(
         '/(quiz)$/i'               => "$1zes",
         '/^(ox)$/i'                => "$1en",
@@ -26,6 +33,9 @@ class Inflect
         '/$/'                      => "s"
     );
 
+    /**
+     * @var array
+     */
     static $singular = array(
         '/(quiz)zes$/i'             => "$1",
         '/(matr)ices$/i'            => "$1ix",
@@ -57,6 +67,9 @@ class Inflect
         '/s$/i'                     => ""
     );
 
+    /**
+     * @var array
+     */
     static $irregular = array(
         'move'   => 'moves',
         'foot'   => 'feet',
@@ -68,6 +81,9 @@ class Inflect
         'person' => 'people'
     );
 
+    /**
+     * @var array
+     */
     static $uncountable = array(
         'sheep',
         'fish',
@@ -80,6 +96,10 @@ class Inflect
         'equipment'
     );
 
+    /**
+     * @param $string
+     * @return mixed
+     */
     public static function pluralize( $string )
     {
         // save some time in the case that singular and plural are the same
@@ -106,6 +126,10 @@ class Inflect
         return $string;
     }
 
+    /**
+     * @param $string
+     * @return mixed
+     */
     public static function singularize( $string )
     {
         // save some time in the case that singular and plural are the same
@@ -131,6 +155,11 @@ class Inflect
         return $string;
     }
 
+    /**
+     * @param $count
+     * @param $string
+     * @return string
+     */
     public static function pluralize_if($count, $string)
     {
         if ($count == 1)
